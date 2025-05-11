@@ -13,14 +13,16 @@ export const ThemeToggle = () => {
   }, [resolvedTheme, setTheme]);
 
   return (
-    <Button
-      size="icon"
-      variant="ghost"
-      onClick={toggleTheme}
-      className="fixed bottom-4 right-4 rounded-3xl border bg-gray-100 shadow-2xl dark:bg-neutral-900/30 cursor-pointer"
-    >
-      <SunIcon className="hidden [html.dark_&]:block" />
-      <MoonIcon className="hidden [html.light_&]:block" />
-    </Button>
+    <>
+      <Button
+        size="icon"
+        variant="outline"
+        onClick={toggleTheme}
+        className="fixed bottom-4 right-4"
+      >
+        <SunIcon className="hidden [html.dark_&]:block" />
+        <MoonIcon className="hidden [html.light_&]:block" />
+      </Button>
+    </>
   );
 };
