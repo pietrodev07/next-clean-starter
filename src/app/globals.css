@@ -116,6 +116,23 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground max-sm:text-sm antialiased;
+  }
+
+  .full-page-centered {
+    @apply min-h-svh flex flex-col items-center justify-center;
+  }
+
+  .title {
+    @apply font-semibold text-4xl;
+  }
+
+  .subtitle {
+    @apply font-semibold text-3xl;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
