@@ -5,16 +5,21 @@ const sampleAction = async () => {
   console.log("throw an action");
 };
 
+const SampleForm = ({ btnLabel }: { btnLabel: string }) => {
+  return (
+    <form action={sampleAction}>
+      <Button type="submit" variant="outline">
+        {btnLabel}
+      </Button>
+    </form>
+  );
+};
+
 export default async function Home() {
   return (
-    <main className="h-svh flex flex-col gap-6 items-center justify-center">
-      <h1 className="font-semibold text-4xl">Nextjs Clean Starter</h1>
-
-      <form action={sampleAction}>
-        <Button className="cursor-pointer" variant="outline">
-          click me to throw something or not
-        </Button>
-      </form>
+    <main className="full-page-centered gap-5">
+      <h1 className="title">Nextjs Clean Starter</h1>
+      <SampleForm btnLabel="click me to throw something or not" />
     </main>
   );
 }
